@@ -24,3 +24,8 @@ params  = { father: person1, mother: person2, child: person3 }
 
 #Test it works
 puts params[:father][:first] 
+
+#Just for fun - Test how long till shuffle returns the original string
+i = 0
+i += 1 until "foobar" == "foobar".shuffle
+puts i
