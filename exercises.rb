@@ -26,6 +26,12 @@ params  = { father: person1, mother: person2, child: person3 }
 puts params[:father][:first] 
 
 #Just for fun - Test how long till shuffle returns the original string
-i = 0
-i += 1 until "foobar" == "foobar".shuffle
-puts i
+highest = 0
+1000.times do
+	i = 0
+	i += 1 until "foobar" == "foobar".shuffle
+	if i > highest
+		highest = i
+	end
+end
+puts "Highest = " + highest.to_s
